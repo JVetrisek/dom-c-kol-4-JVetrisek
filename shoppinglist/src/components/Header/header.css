@@ -1,0 +1,106 @@
+/* Stylování pro hlavní Header */
+.header {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Stylování tlačítka pro logo */
+.logo-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Stylování sekce uživatele */
+.user-section {
+    position: relative;
+}
+
+/* Stylování User tlačítka s ikonou */
+.user-button {
+    background-color: white; /* Bílé pozadí */
+    color: #006cd9; /* Barva textu */
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.5em 1.3em; /* Padding pro lepší vzhled */
+    border: none; /* Bez rámečku */
+    border-radius: 20px; /* Zaoblení */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Lehké stínování */
+    transition: background-color 0.3s, color 0.3s; /* Plynulý přechod */
+}
+
+/* Ikona v User tlačítku */
+.user-button .icon {
+    font-size: 1.2rem;
+    color: #006cd9; /* Normální barva ikony */
+    transition: color 0.3s; /* Plynulý přechod barvy */
+}
+
+/* Text "User" pro skrytí na menších obrazovkách */
+.user-button .user-text {
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Rozbalovací menu uživatele */
+.user-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    min-width: 150px;
+}
+
+/* Stylování seznamu uživatelů */
+.user-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user-menu li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-menu li:hover {
+    background-color: #f2f2f2;
+}
+
+/* Responzivní stylování - zobrazení pouze ikony na menších obrazovkách */
+@media (max-width: 600px) {
+    .user-button .user-text {
+        display: none; /* Skrytí textu "User" na malých obrazovkách */
+    }
+}
+
+/* Efekt hover pro User tlačítko */
+.user-button:hover {
+    background-color: #006cd9; /* Reverze pozadí */
+    color: white; /* Reverze textu */
+}
+
+.user-button:hover .icon {
+    color: white; /* Reverze barvy ikony na bílou při hoveru */
+}

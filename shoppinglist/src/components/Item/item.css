@@ -1,0 +1,47 @@
+/* src/context/item.css */
+.item-tile {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-tile h3{
+    color: #333;
+    font-weight: bold;
+}
+
+.item-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5em;
+    margin-left: 0.4em;
+}
+
+.item-icons i{
+    padding: 0.4em 2em;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.item-icons i:hover{
+    background-color: #d8d8d8;
+}
+
+.modal {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Poloprůhledné pozadí */
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

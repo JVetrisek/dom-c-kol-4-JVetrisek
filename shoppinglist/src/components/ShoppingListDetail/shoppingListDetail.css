@@ -1,0 +1,309 @@
+.loading{ 
+    width: 3rem;
+    margin: 0 auto;
+    display: block;
+}
+
+.shopping-list-detail{
+    width: 80%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+}
+.shopping-list-title{
+    color: #006cd9;
+    font-weight: bold;
+}
+.border-line{
+    border-top: 1px solid #333;
+}
+.item-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.2rem 0.7em;
+}
+
+@media (max-width: 1900px) {
+    .item-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .item-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .item-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Poloprůhledné pozadí */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ujistěte se, že je nad ostatními prvky */
+}
+
+/* Modal Content */
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px; /* Nebo jakákoliv jiná šířka */
+    max-width: 90%; /* Omezte maximální šířku pro menší obrazovky */
+}
+
+/* Optional: Center the text */
+.modal h2 {
+    margin: 0 0 10px;
+}
+
+.add-member-button {
+    background-color: transparent; /* Bez pozadí */
+    border: none; /* Bez ohraničení */
+    cursor: pointer; /* Změní kurzor na ukazatel */
+    font-size: 16px; /* Velikost písma */
+    display: flex; /* Flexbox pro zarovnání ikony a textu */
+    align-items: center; /* Vertikální zarovnání */
+}
+
+.add-member-button i {
+    margin-right: 5px; /* Vzdálenost mezi ikonou a textem */
+}
+
+h3{
+    color:#333;
+    font-weight: bold;
+}
+p{
+    color:#333;
+}
+
+.add-member-button{
+    color:#333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+}
+
+label {
+    color:#333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+label input{
+    margin-right: 0.5rem;
+}
+.filter-options{
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 button{
+    margin-left: 1rem;
+}
+
+.shopping-list-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+    .shopping-list-header{
+        display:block;
+        margin-bottom: 1rem;
+    }
+}
+
+.add-item-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    max-width: 80%; /* Maximální šířka 80% */
+}
+
+.new-item-input {
+    flex: 1;
+    padding: 5px 15px;
+    font-size: 16px;
+    border: 1px solid #4a7c9e; /* Světle zelený okraj */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+.new-item-input:focus {
+    border-color: #006cd9; /* Tmavší zelená při zaměření */
+}
+
+.add-item-button {
+    padding: 5px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #006cd9; /* Tmavší zelená pro tlačítko */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-item-button:hover {
+    background-color: #4a7c9e; /* O něco tmavší při hoveru */
+}
+
+.add-item-button:active {
+    background-color: #4a7c9e; /* O něco tmavší při aktivním stavu */
+}
+
+/* Základní styl pro deaktivovanou komponentu */
+.shopping-list-detail.disabled {
+    pointer-events: none; /* Vypne interakci pro všechny prvky uvnitř */
+    opacity: 0.6; /* Ztlumení celé komponenty */
+}
+
+/* Tlačítko pro archivaci zůstává aktivní */
+.shopping-list-detail.disabled .archive-button {
+    pointer-events: all; /* Umožní interakci s tlačítkem archivace */
+    opacity: 1; /* Zachová plnou viditelnost */
+    cursor: pointer; /* Udržuje ukazatel */
+    background-color: #f3f4f6; /* Barva pozadí */
+    border-color: #ccc; /* Barva okraje */
+    color: #333;
+}
+
+/* Styl pro tlačítko Archivace */
+.archive-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #f4f6f9; /* Světle šedé pozadí pro neutrální vzhled */
+    color: #577bbf; /* Modrá barva pro text */
+    border: 2px solid #577bbf; /* Modrý rámeček */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Zajištění viditelnosti */
+}
+
+/* Ikona u tlačítka */
+.archive-button i {
+    margin-right: 8px; /* Mezera mezi ikonou a textem */
+}
+
+.archive-button:hover {
+    background-color: #577bbf; /* Modré pozadí na hover */
+    color: #fff; /* Bílé písmo při hoveru */
+    transform: scale(1.05); /* Mírné zvětšení tlačítka */
+}
+
+.archive-button.active {
+    background-color: #577bbf; /* Modré pozadí pro aktivní tlačítko */
+    color: #fff; /* Bílé písmo */
+    border-color: #577bbf; /* Zachování modrého rámečku pro aktivní stav */
+}
+
+.archive-button:active {
+    transform: scale(0.98); /* Mírné zmenšení tlačítka při kliknutí */
+}
+
+/* Základní styl pro deaktivovanou komponentu */
+.shopping-list-detail.disabled {
+    pointer-events: none; /* Vypne interakci pro všechny prvky uvnitř */
+    opacity: 0.6; /* Ztlumení celé komponenty */
+}
+
+/* Tlačítko pro archivaci zůstává aktivní */
+.shopping-list-detail.disabled .archive-button {
+    pointer-events: all; /* Umožní interakci s tlačítkem archivace */
+    opacity: 1; /* Zachová plnou viditelnost */
+    cursor: pointer; /* Udržuje ukazatel */
+    background-color: #f3f4f6; /* Barva pozadí */
+    border-color: #ccc; /* Barva okraje */
+    color: #333;
+}
+
+/* Styl pro tlačítko Archivace */
+.archive-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #f4f6f9; /* Světle šedé pozadí pro neutrální vzhled */
+    color: #577bbf; /* Modrá barva pro text */
+    border: 2px solid #577bbf; /* Modrý rámeček */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Zajištění viditelnosti */
+}
+
+/* Ikona u tlačítka */
+.archive-button i {
+    margin-right: 8px; /* Mezera mezi ikonou a textem */
+}
+
+.archive-button:hover {
+    background-color: #577bbf; /* Modré pozadí na hover */
+    color: #fff; /* Bílé písmo při hoveru */
+    transform: scale(1.05); /* Mírné zvětšení tlačítka */
+}
+
+.archive-button.active {
+    background-color: #577bbf; /* Modré pozadí pro aktivní tlačítko */
+    color: #fff; /* Bílé písmo */
+    border-color: #577bbf; /* Zachování modrého rámečku pro aktivní stav */
+}
+
+.archive-button:active {
+    transform: scale(0.98); /* Mírné zmenšení tlačítka při kliknutí */
+}
+
+/* Při deaktivaci komponenty se tlačítko přesune do středu */
+.shopping-list-detail.disabled .archive-button {
+    z-index: 20; /* Tlačítko bude viditelné nad deaktivovanými prvky */
+    background-color: #ffffff; /* Světlejší pozadí pro zvýraznění */
+    border-color: #ff6600; /* Oranžový rámeček pro lepší kontrast */
+    color: #ff6600; /* Oranžová barva písma */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Stín pro výraznost */
+}
+
+/* Zviditelnění interaktivnosti */
+.shopping-list-detail.disabled .archive-button:hover {
+    background-color: #ff6600; /* Oranžové pozadí na hover */
+    color: #fff; /* Bílé písmo při hoveru */
+}
+
+.shopping-list-detail.disabled .archive-button:active {
+    background-color: #cc5200; /* Tmavší oranžová na kliknutí */
+    transform: scale(1.05); /* Mírné zmenšení při aktivním stavu */
+}
+
+/* Styl pro deaktivovanou komponentu */
+.shopping-list-detail.disabled {
+    opacity: 0.6; /* Mírně průhledná komponenta */
+    pointer-events: none; /* Všechny interaktivní prvky jsou deaktivované */
+}
+
+.shopping-list-detail.disabled .archive-button {
+    cursor: pointer; /* Tlačítko pro archivaci zůstane interaktivní */
+}

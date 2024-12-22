@@ -1,0 +1,15 @@
+h2{
+    color:#333;
+    font-weight: bold;
+}
+li{
+    color:#333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 0.6em 1em;
+    border-radius: 8px;
+    font-weight: bold;
+}
+li i{
+    margin-left: 0.7em;
+}

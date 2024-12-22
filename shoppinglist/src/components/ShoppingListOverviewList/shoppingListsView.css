@@ -1,0 +1,30 @@
+
+.shoppinglist-gird p{
+    font-size: medium;
+    font-weight: bold;
+    color: #333;
+    padding: 2em 3em;
+}
+.shoppinglist-gird{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0,5rem;
+    margin-top: 1rem;
+}
+@media (min-width: 600px) {
+    .shoppinglist-gird {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width: 520px) {
+    .shoppinglist-gird {
+        grid-template-columns: 1fr;
+    }
+}
+.shoppingListsTable{
+    width: 80%;
+    margin: -1rem auto 0;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+}
